@@ -1,0 +1,232 @@
+.carousel-img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  background-color: #000;
+}
+
+/* Custom text overlay */
+.custom-caption {
+  position: absolute;
+  top: 30%;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.custom-caption.right {
+  right: 5%;
+  text-align: right;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.custom-caption.left {
+  left: 5%;
+  text-align: left;
+}
+
+/* General Button Styles */
+.manBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.manBtn:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.manmodelH2 {
+  font-size: 2rem;
+}
+.childmodelH2{
+  font-size: 2rem;
+}
+.womanBtn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f1c40f;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.womanBtn:hover {
+  background-color: #d4ac0d;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.womenModelImg {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+.childBtn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3a8a;
+  background-color: #ffffff;
+  border: 2px solid #1e3a8a;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.childBtn:hover {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.cleanBlueBtn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1e40af;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(30, 64, 175, 0.2);
+}
+
+.cleanBlueBtn:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(30, 64, 175, 0.3);
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 50vh;
+    width: min-content;
+  }
+
+  .custom-caption {
+    top: 20%;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .carousel-control-prev {
+    left: 5%;
+  }
+
+  .carousel-control-next {
+    right: 5%;
+  }
+
+  .manmodelH2 {
+    font-size: 1.3rem;
+  }
+
+  .manBtn {
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .femaleH2{
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+  .childmodelH2{
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+  .womanBtn {
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .childBtn {
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .cleanBlueBtn{
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .custom-caption.right {
+    text-align: end;
+    font-size: 2rem;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+  }
+
+  .womenModelImg {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: right center;
+    background-color: #000;
+  }
+
+  .custom-caption.left {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    justify-content: end;
+  }
+}
+
+/* Remove Bootstrap default arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none;
+}
+
+/* Custom simple arrows */
+.carousel-control-prev::after,
+.carousel-control-next::after {
+  font-weight: bold;
+  font-size: 3rem;
+  color: black;
+  border: none;
+  text-decoration: none;
+}
+
+.carousel-control-prev::after {
+  content: '<';
+}
+
+.carousel-control-next::after {
+  content: '>';
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  text-decoration: none;
+  background: none;
+  box-shadow: none;
+}

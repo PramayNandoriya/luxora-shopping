@@ -1,0 +1,32 @@
+.brandPartners{
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.imgBoxs{   
+    width: 80%;
+    overflow: hidden;
+}
+.imgs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.eachImgs{
+    width: 10%;
+}
+
+@media (max-width:768px){
+    .eachImgs{
+        width: 30%;
+    }    
+    .brandPartners{
+        margin-top: 5vh;
+        flex-direction: column;
+        gap: 0px;
+        /* background-color: aqua; */
+    }
+}

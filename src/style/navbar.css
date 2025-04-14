@@ -1,0 +1,185 @@
+.navBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    color: black;
+    width: 100%;
+    height: 10vh;
+    z-index: 100;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 0 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navBox > p {
+    font-family: fantasy;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .navLinks {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    margin: 0 !important;
+  }
+  
+  .links {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .links:hover {
+    color: #1976d2;
+  }
+  
+  .mobileNav {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 90;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobileNav li {
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .userAuth {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .mobileScreen {
+    display: none;
+  }
+
+  .authBtnMobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .navBox{
+      height: 8vh;
+    }
+    .navLinks {
+      display: none;
+    }
+  
+    .userAuth {
+      display: none;
+    }
+  
+    .mobileScreen {
+      display: block;
+    }
+  
+    .mobileNav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mobileNav li {
+      color: black;
+    }
+  
+    .mobileNav::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+  
+    .mobileNav .loginBtn {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  
+  .loginBtn {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.3em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: royalblue;
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+  }
+  
+  .loginBtn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 2px solid royalblue;
+  }
+  
+  .loginBtn span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  .loginBtn:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: royalblue;
+  }
+  
+  .loginBtn:hover {
+    color: white;
+  }
+  
+  .loginBtn:active span::before {
+    background: #2751cd;
+  }
+  
+
+  /* Prevent scrolling when the mobile menu is open */
+.no-scroll {
+    overflow: hidden;
+}

@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  height: 100vh;
+  /* flex-direction: column; Stack the form on small screens */
+}
+
+.form-left, .form-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Added padding for better spacing on smaller screens */
+}
+
+.form-left {
+  background-color: white;
+}
+
+.form-right {
+  background-color: #007BFF;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%; /* Make form width 100% for smaller screens */
+  max-width: 400px; /* Limit the form width on large screens */
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.sign-in-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  width: 100%; /* Make buttons full-width */
+  margin-bottom: 2vh;
+}
+select {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btngroup{
+  width: 100%;
+  border: none;
+  background: none !important;
+  
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: 0;
+  }
+
+  .form-left, .form-right {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-left {
+    background-color: white;
+  }
+
+  .form-right {
+    background-color: #007BFF;
+    color: white;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .input-group {
+    margin-bottom: 12px;
+  }
+
+  .input-group input {
+    padding: 12px;
+  }
+
+  .sign-in-btn, .sign-up-btn {
+    padding: 12px 25px;
+  }
+
+  .social-icons > img {
+    width: 10%;
+  }
+
+  select {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    margin-top: 15vh;
+  }
+
+  .form-left, .form-right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .input-group input {
+    padding: 12px;
+  }
+
+  .sign-in-btn, .sign-up-btn {
+    padding: 15px 30px;
+  }
+
+  .social-icons > img {
+    width: 12%;
+  }
+
+  select {
+    width: 80%;
+  }
+}
