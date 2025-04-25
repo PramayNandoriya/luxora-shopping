@@ -27,15 +27,13 @@ const ProductCate = () => {
             <div className='productDisplay'>
                 {filterProducts.map((item) =>
                     <div className='categoryproductWarpper' key={item.id}>
-                        <img className='categoryImg' src={item.image}/>
+                        <img className='categoryImg' src={item.image} alt='' />
                         <div className='cateProInfo'>
-                        <p className="title">{item.title}</p>
-                        <p>£ : {item.price}</p> 
-                         <Rating name="half-rating" value={item.rating.rate} readOnly /> <p>FeedBack's : ({item.rating.count})</p>
-                        
-
+                            <p className="title">{item.title}</p>
+                            <p>£ : {item.price}</p>
+                            <Rating name="half-rating" value={item.rating.rate} readOnly /> <p>FeedBack's : ({item.rating.count})</p>
                         </div>
-                        
+
                     </div>
                 )}
             </div>
