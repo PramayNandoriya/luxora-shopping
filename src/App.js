@@ -12,6 +12,11 @@ import ProductPage from './pages/ProductPage';
 import UserNew from './pages/UserNew';
 import Navbar from './pages/Navbar';
 import Register from './pages/Register';
+import AllProduct from './pages/AllProduct';
+import Cart from './pages/Cart';
+import Promotions from './pages/Promotions';
+import Top5Products from './pages/Top5Products';
+import ThreeModelsAd from './pages/ThreeModelsAd';
 
 const MainLayout = () => {
   return (
@@ -30,6 +35,9 @@ const Home = () => {
       <HomePage />
       <Brand />
       <Features />
+      <Promotions/>
+      <Top5Products/>
+      <ThreeModelsAd/>
       <ProductList onProductClick={setOpenProductPage} />
       {openProductPage && (
         <ProductPage
@@ -59,6 +67,22 @@ const router = createBrowserRouter([
       {
         path: '/createAnAccount',
         element: <Register />
+      },
+      {
+        path: '/AllProduct',
+        element: <AllProduct />
+      },
+      {
+        path: '/cart',
+        element: <Cart />
+      },
+      {
+        path: '/contactUs',
+        element: <Contact />
+      },
+      {
+        path: '/promtions',
+        element: <Promotions />
       }
     ]
   }

@@ -1,0 +1,35 @@
+.threeModelsWrapper {
+    display: flex;
+    background-color: lightcyan;
+    height: 45vh;
+    margin-top: 25vh;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.threeModelsWrapper>img {
+    position: relative;
+    bottom: 5vh;
+    width: 25vw;
+    height: 55vh;
+    object-fit: fill;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 2.4));
+
+}
+
+@media (max-width:900px) {
+    .threeModelsWrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .threeModelsWrapper>img {
+        position: relative;
+        bottom: 5vh;
+        width: 50vw;
+        height: 30vh;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 2.4));
+    }
+}

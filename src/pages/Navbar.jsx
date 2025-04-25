@@ -74,15 +74,15 @@ const Navbar = () => {
 
     return (
         <div className={`navBox ${navBg ? "scrolled" : ""}`}>
-            <p onClick={()=>{navigate("/")}} style={{ margin: "0" }}>Luxora</p>
+            <p onClick={() => { navigate("/") }} style={{ margin: "0" }}>Luxora</p>
 
             {menubar ? (
                 <div className='mobileNav' ref={menuRef}>
                     <NavLink className="links" to="/" end onClick={closeMenu}>Home</NavLink>
-                    <NavLink className="links" to="/product" end onClick={closeMenu}>Product</NavLink>
-                    <NavLink className="links" to="/man" end onClick={closeMenu}>Man</NavLink>
-                    <NavLink className="links" to="/woman" end onClick={closeMenu}>Woman</NavLink>
-                    <NavLink className="links" to="/supportus" end onClick={closeMenu}>Support Us</NavLink>
+                    <NavLink className="links" to="/AllProduct" end onClick={closeMenu}>Product</NavLink>
+                    {/* <NavLink className="links" to="/man" end onClick={closeMenu}>Man</NavLink>
+                    <NavLink className="links" to="/woman" end onClick={closeMenu}>Woman</NavLink> */}
+                    <NavLink className="links" to="/contactUs" end onClick={closeMenu}>Contact Us</NavLink>
                     <div className="authBtnMobile">
                         <button className="loginBtn" onClick={handleLogin}>Login
                             <span></span>
@@ -95,14 +95,14 @@ const Navbar = () => {
             ) : (
                 <ul className='navLinks'>
                     <NavLink className="links" to="/" end>Home</NavLink>
-                    <li>Product</li>
-                    <li>Man</li>
-                    <li>Woman</li>
-                    <li>Support Us</li>
+                    <NavLink className="links" to="/AllProduct" end onClick={closeMenu}>Product</NavLink>
+                    {/* <NavLink className="links" to="/man" end onClick={closeMenu}>Man</NavLink>
+                    <NavLink className="links" to="/woman" end onClick={closeMenu}>Woman</NavLink> */}
+                    <NavLink className="links" to="/contactUs" end onClick={closeMenu}>Contact Us</NavLink>
                 </ul>
             )}
 
-            <IconButton>
+            <IconButton onClick={()=>{navigate("/cart")}}>
                 <ShoppingCartIcon style={{ color: "black" }} fontSize="medium" />
                 <CartBadge badgeContent={2} color="primary" overlap="circular" />
             </IconButton>

@@ -1,0 +1,82 @@
+.promoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.promoBox1 {
+    background-color: lightpink;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 40vw;
+}
+
+.promoBox1>img {
+    background: none;
+    object-fit: fill;
+    /* width: 30vw; */
+    height: 40vh;
+}
+
+.pormoDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* justify-content: space-evenly; */
+}
+
+.promoBox2 {
+    background-color: lightblue;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 40vw;
+}
+
+.promoBox2>img {
+    background: none;
+    object-fit: fill;
+    /* width: 30vw; */
+    height: 40vh;
+}
+@media (max-width:1025px) {
+    .promoWrapper {
+        flex-direction: column;
+        /* width: 80%; */
+    }
+    
+    .promoBox1,
+    .promoBox2 {
+        width: 70vw;
+    }
+    .promoBox1>img,
+    .promoBox2>img {
+        width: 40vw;
+        object-fit: contain;
+        height: 40vh
+    }
+}
+
+@media (max-width:912px) {
+    .promoWrapper {
+        flex-direction: column !important;
+    }
+
+    .promoBox1,
+    .promoBox2 {
+        width: 80vw !important;
+    }
+
+    .promoBox1>img,
+    .promoBox2>img {
+        width: 40vw !important;
+        object-fit: contain !important;
+        height: 20vh !important;
+    }
+}
+

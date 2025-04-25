@@ -55,7 +55,7 @@ const Contact = ({contact_key}) => {
         viewport={{ once: false }}
         className='contactBox' id='contactUs'>
             <div className="clientText">
-                <h1 className='FirstText'>Support</h1> <h1 className='secondText'>Us</h1>
+                <h1 className='FirstText'>Contact</h1> <h1 className='secondText'>Us</h1>
             </div>
             <p className='conatactLine'>Ready to Make a Move? Let’s Build Your Future Together</p>
 
