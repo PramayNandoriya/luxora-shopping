@@ -8,10 +8,10 @@ import qualityProduct from "../asserts/img/qualityProduct.png";
 const Features = () => {
     return (
        <div className='featureBox'>
-        <img src={fast}></img>
-        <img src={pngegg}></img>
-        <img src={qualityProduct}></img>
-        <img src={no1} className='img4'></img>
+        <img src={fast} alt=''></img>
+        <img src={pngegg} alt=''></img>
+        <img src={qualityProduct} alt=''></img>
+        <img src={no1} className='img4' alt=''></img>
        </div>
     );
 }
