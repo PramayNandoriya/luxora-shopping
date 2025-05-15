@@ -1,0 +1,145 @@
+.productDetailBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ProDetaiWrapper {
+    background-color: #ffffff;
+    border-radius: 20px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .ProDetaiWrapper {
+        flex-direction: column;
+        align-items: center;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+.ProDetailImg {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProDetailImg img {
+    width: 100%;
+    max-width: 250px;
+    object-fit: contain;
+}
+
+.proDetailInfo {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-top: 2vh;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+.proDetailPrice {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.price {
+    color: #e53935;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.offer {
+    color: green;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.proDetailButtons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.qty-btn {
+    padding: 6px 12px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.qty-btn:hover {
+    background-color: #ddd;
+}
+
+.quantity {
+    font-size: 1.1rem;
+    min-width: 30px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+}

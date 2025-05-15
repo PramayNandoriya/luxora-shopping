@@ -17,6 +17,7 @@ import Cart from './pages/Cart';
 import Promotions from './pages/Promotions';
 import Top5Products from './pages/Top5Products';
 import ThreeModelsAd from './pages/ThreeModelsAd';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 const MainLayout = () => {
   return (
@@ -83,7 +84,11 @@ const router = createBrowserRouter([
       {
         path: '/promtions',
         element: <Promotions />
-      }
+      },
+      {
+        path: '/product-details',
+        element: <ProductDetailPage />
+      },
     ]
   }
 ]);
