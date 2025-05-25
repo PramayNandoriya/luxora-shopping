@@ -16,7 +16,6 @@ const ProductCate = () => {
     }, []);
 
     const filterProducts = proData.filter(item => categoruProduct === "Men" ? item.category.toLowerCase() === "men's clothing" : item.category.toLowerCase() === "women's clothing")
-    // console.log(filterProducts);
     return (
         <div className='xenderProductWrapper'>
             <div className='categorySelector'>

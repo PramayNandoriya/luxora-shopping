@@ -22,10 +22,7 @@ import { ToastContainer } from "react-toastify";
 
 
 const MainLayout = () => {
-  const [isauth, setIsAuth] = useState(false)
-  const privateRouting = ({ element }) => {
-    return isauth ? element : <navigate to="/login" />
-  }
+
   return (
     <>
       <Navbar />
@@ -66,7 +63,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <privateRouting element={<Home />} />
+        element: <Home />
       },
       {
         path: '/login',

@@ -15,7 +15,6 @@ const Register = () => {
     })
 
     const handleError = () => {
-        console.error('Login Failed');
         alert("Google login failed. Try again.");
     };
 
@@ -28,7 +27,7 @@ const Register = () => {
         });
 
         const data = await res.json();
-        console.log("JWT Token:", data.token);
+        // console.log("JWT Token:", data.token);
     };
 
     const handleSuccess = (credentialResponse) => {
@@ -37,13 +36,11 @@ const Register = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        console.log(name, value);
 
         const copyRegisterData = { ...registerForm }
         copyRegisterData[name] = value;
         setRegisterForm(copyRegisterData)
     }
-    // console.log(registerForm);
 
     const handleRegisterData = async (e) => {
     e.preventDefault();

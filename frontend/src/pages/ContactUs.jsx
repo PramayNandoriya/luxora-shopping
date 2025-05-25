@@ -23,8 +23,7 @@ const Contact = ({contact_key}) => {
     const onSubmit = async (event) => {
        
         event.preventDefault();
-     
-        console.log(contact_key)
+    
         setResult("Sending....");
         const formData = new FormData(event.target);
     

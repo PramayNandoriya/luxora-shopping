@@ -38,7 +38,6 @@ const Login = () => {
 
             if (success) {
                 handleSucessTostify(message || "Login successful!");
-                console.log("JWT Token:", jwtToken, fullname);
                 localStorage.setItem("token", jwtToken);
                 localStorage.setItem("userName", fullname);
 
@@ -66,7 +65,6 @@ const Login = () => {
         });
 
         const data = await res.json();
-        console.log("Google JWT Token:", data.token);
         if (data?.token) {
             handleSucessTostify("Google login successful!");
             localStorage.setItem("token", data.token);

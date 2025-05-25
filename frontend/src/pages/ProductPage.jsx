@@ -8,7 +8,6 @@ const ProductPage = ({ handleCloseProductPage, selectedProduct }) => {
 
     useEffect(() => {
         // Log the selected product to check if it's passed correctly
-        console.log("Selected Product:", selectedProduct);
     }, [selectedProduct]);
 
     if (!selectedProduct) {
