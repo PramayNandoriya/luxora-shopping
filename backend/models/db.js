@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const mongo_url = process.env.MONGO_CONN;
+const mongo_url = process.env.MONGO_URL;
 
 mongoose
   .connect(mongo_url, {
